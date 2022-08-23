@@ -1,0 +1,80 @@
+{
+	"chats":[
+		{
+			"name": "Grace Freeman",
+			"type": "personal_chat",
+			"img": "https://images.unsplash.com/photo-1634748210255-af588c16652a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+			"id": 1001,
+			"messages": [
+				{
+				"id": 1,
+				"type": "message",
+				"date": "2020-01-01T00:00:01",
+				"from": "Grace Freeman",
+				"from_id": 4720225552,
+				"text": "Hello!"
+				},
+				{
+				"id": 2,
+				"type": "message",
+				"date": "2020-01-01T00:00:02",
+				"from": "you",
+				"from_id": 4325636679,
+				"text": "It's 2020..."
+				},
+				{
+				"id": 3,
+				"type": "message",
+				"date": "2020-01-01T00:00:04",
+				"from": "you",
+				"from_id": 4325636679,
+				"text": "Fireworks!"
+				},
+				{
+				"id": 4,
+				"type": "message",
+				"date": "2020-01-01T00:00:05",
+				"from": "Grace Freeman",
+				"from_id": 4720225552,
+				"text": "You're a minute late!"
+				}
+			]
+		},
+		{
+			"name": "Douglas",
+			"type": "personal_chat",
+			"img": "https://images.unsplash.com/photo-1660598353451-9c5a0a0ff901?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+			"id": 1002,
+			"messages": [
+				{
+				"id": 1,
+				"type": "message",
+				"date": "2020-01-01T00:00:01",
+				"from": "you",
+				"text": "Hi!"
+				},
+				{
+				"id": 2,
+				"type": "message",
+				"date": "2020-01-01T00:00:02",
+				"from": "Douglas",
+				"text": "Come here"
+				},
+				{
+				"id": 3,
+				"type": "message",
+				"date": "2020-01-01T00:00:04",
+				"from": "you",
+				"text": "OKEY"
+				},
+				{
+				"id": 4,
+				"type": "message",
+				"date": "2020-01-01T00:00:05",
+				"from": "Douglas",
+				"text": "I'm wait!"
+				}
+			]
+		}
+	]
+}

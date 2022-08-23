@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.container{
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.all-chats{
+  border-right: 1px solid #b6b6b6;
+}
+
+.all-chats__title{
+  color: #71bfbf;
+  padding: 30px 10px 50px 15px;
+}
+
+.all-chats__last-messages{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.all-chats__people-img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.all-chats__wrap-people-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.all-chats__people-name{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.all-chats__last-messages,
+.all-chats__last-date-messages{
+  color: #838383;
+}
+
+.all-chats__people-wrap{
+  padding: 15px 15px;
+}
+
+.all-chats__people-wrap:not(:last-child){
+  border-bottom: 1px solid #b6b6b6;
+}
+
+.all-chats__last-date-messages{
+  margin-left: auto;
+}
