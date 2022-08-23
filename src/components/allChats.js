@@ -1,19 +1,20 @@
 import React from 'react';
+import img1 from "../img/tick-mark.png"
 
 class AllChats extends React.Component {
-    constructor() {
-        super();
-    }
 
     render() {
         return <div className="all-chats">
             <h1 className="all-chats__title">Chats</h1>
             {
-                this.props.chats.chats.length > 0 ?
+                this.props.chats.length > 0 ?
                 <div>
-                    {this.props.chats.chats.map(chat =>
-                        <div className="all-chats__people-wrap d-flex">
-                            <img className="all-chats__people-img" src={chat.img} alt={chat.name}/>
+                    {this.props.chats.map(chat =>
+                        <div key={chat.id} className="all-chats__people-wrap d-flex">
+                            <div className="all-chats__status">
+                                <img className="all-chats__people-img" src={chat.img} alt={chat.name}/>
+                                <span className="all-chat__status-online"><img src={img1} alt=""/></span>
+                            </div>
                             <div className="all-chats__wrap-people-name">
                                 <div className="all-chats__people-name">
                                     {chat.name}

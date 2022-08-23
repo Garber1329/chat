@@ -4,19 +4,38 @@
   margin: 0;
   padding: 0;
 }
-
+html,
 body{
+  height: 100%;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
+
+.sticky-footer{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  flex: 1 1 auto;
+}
+
 
 .container{
   width: 1140px;
   margin: 0 auto;
 }
 
-.all-chats{
+/* All Chats */
+
+.chats-left{
+  width: 40%;
   border-right: 1px solid #b6b6b6;
+}
+
+.chats-right{
+  width: 60%;
 }
 
 .all-chats__title{
@@ -69,4 +88,93 @@ body{
 
 .all-chats__last-date-messages{
   margin-left: auto;
+}
+
+.all-chats__status{
+  position: relative;
+}
+
+.all-chat__status-online img{
+  width: 20px;
+  height: 20px;
+  right: 15px;
+  bottom: 0px;
+  position: absolute;
+}
+
+/* Search input */
+
+.text-field__icon {
+  position: relative;
+  margin-right: 0;
+}
+
+.text-field__icon_search::before {
+  width: 16px;
+  height: 16px;
+  background-image: url("img/Search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text-field__icon:before {
+  content: "";
+  color: #bdbdbd;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  left: 24px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.post-filter{
+  width: 85%;
+}
+
+.post-filter input{
+  width: 100%;
+  border: 1px solid #b6b6b6;
+}
+
+.text-field__input {
+  display: block;
+  padding: 10px 10px 10px 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-field__input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 7px 1px #b6b6b6;
+}
+
+.text-field__input:disabled,
+.text-field__input[readonly] {
+  background-color: #f5f5f5;
+  opacity: 1;
+}
+
+.chats-left__info{
+  background: #f5f5f5;
+  padding: 15px;
+  border-bottom: 1px solid #b6b6b6;
+
+  .all-chats__status{
+    margin-bottom: 20px;
+    display: block;
+    width: 80px;
+  }
 }
