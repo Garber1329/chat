@@ -12,7 +12,7 @@
 				"date": "2020-01-01T00:00:01",
 				"from": "Grace Freeman",
 				"from_id": 4720225552,
-				"text": "Hello!"
+				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 				},
 				{
 				"id": 2,
@@ -20,7 +20,7 @@
 				"date": "2020-01-01T00:00:02",
 				"from": "you",
 				"from_id": 4325636679,
-				"text": "It's 2020..."
+				"text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
 				},
 				{
 				"id": 3,
@@ -28,7 +28,7 @@
 				"date": "2020-01-01T00:00:04",
 				"from": "you",
 				"from_id": 4325636679,
-				"text": "Fireworks!"
+				"text": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 				},
 				{
 				"id": 4,
@@ -36,7 +36,7 @@
 				"date": "2020-01-01T00:00:05",
 				"from": "Grace Freeman",
 				"from_id": 4720225552,
-				"text": "You're a minute late!"
+				"text": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. "
 				}
 			]
 		},

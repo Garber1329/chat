@@ -10,7 +10,8 @@ class AllChats extends React.Component {
                 this.props.chats.length > 0 ?
                 <div>
                     {this.props.chats.map(chat =>
-                        <div key={chat.id} className="all-chats__people-wrap d-flex">
+                        <div key={chat.id} className="all-chats__people-wrap d-flex"
+                        onClick={() => this.props.setSelectChat(chat)}>
                             <div className="all-chats__status">
                                 <img className="all-chats__people-img" src={chat.img} alt={chat.name}/>
                                 <span className="all-chat__status-online"><img src={img1} alt=""/></span>
@@ -25,7 +26,6 @@ class AllChats extends React.Component {
                             </div>
                             <div className="all-chats__last-date-messages">
                                 {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(chat.messages[chat.messages.length-1].date)))}
-
                             </div>
                         </div>
 
