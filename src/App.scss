@@ -6,20 +6,18 @@
 }
 html,
 body{
-  height: 100%;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.3;
+
 }
 
-.sticky-footer{
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+.root{
+
 }
 
 .main{
-  flex: 1 1 auto;
+  height: 100vh;
 }
 
 .container{
@@ -31,11 +29,13 @@ body{
 
 .chats-left{
   width: 40%;
+  height: 100vh;
   border-right: 1px solid #b6b6b6;
 }
 
 .chats-right{
   width: 60%;
+  height: 100vh!important;
   background: #f8f8f8;
 }
 
@@ -109,8 +109,8 @@ body{
 .all-chat__status-online img{
   width: 20px;
   height: 20px;
-  right: 15px;
-  bottom: 0px;
+  right: 20px;
+  bottom: 2px;
   position: absolute;
 }
 
@@ -184,10 +184,12 @@ body{
   padding: 15px;
   border-bottom: 1px solid #b6b6b6;
 
+
   .all-chats__status{
     margin-bottom: 20px;
     display: block;
     width: 80px;
+    position: relative;
   }
 }
 
@@ -196,12 +198,26 @@ body{
 .message-box__wrap{
 
   .message-box__name{
-    padding: 15px;
-    border-bottom: 1px solid #b6b6b6;
+    padding: 0 15px;
     background: #eeeeee;
+    display: flex;
+    align-items: center;
+    height: 10vh!important;
+    box-shadow: inset 1px -25px 0px -24px #b6b6b6;
 
     .all-chats__status{
+      position: relative;
       height: 60px;
+      width: 60px;
+      margin-right: 20px;
+
+      .all-chat__status-online{
+        width: 20px;
+        height: 20px;
+        right: -25px;
+        bottom: -4px;
+        position: absolute;
+      }
     }
 
     .all-chats__people-name{
@@ -213,6 +229,8 @@ body{
   .message-box__chat-wrap{
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    height: 79vh!important;
 
     .message-box__mes-from-you,
     .message-box__mes-date-you{
@@ -263,6 +281,44 @@ body{
       }
     }
   }
+}
+
+.message-box__bottom{
+  background: #eeeeee;
+  width: calc(100% - 40px);
+  padding: 20px;
+  height: 6vh!important;
+  box-shadow: inset 1px 25px 0px -24px #b6b6b6;
+}
+
+.message-box__input-wrap {
+  position: relative;
+  width: 100%;
+
+}
+.message-box__input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  padding: 20px 80px 20px 30px;
+  line-height: 1;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+}
+.message-box__botton {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  bottom: 0px;
+  border: 0;
+  background: url("./img/send.png") no-repeat center center / cover;
+  outline: none;
+  margin: 0;
+  z-index: 2;
+  cursor: pointer;
 }
 
 

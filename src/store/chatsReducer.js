@@ -1,18 +1,19 @@
-import chatJSON from "../share/chats.json"
+import * as ActionTypes from './actionTypes';
 
-const defaultState = {
-    chats: chatJSON
-}
+export const Chats = (state = { isLoading: true,
+    errMess: null,
+    chats:[]}, action) => {
+    switch (action.type) {
+        case ActionTypes.ADD_CHATS:
+            return {...state, isLoading: false, errMess: null, chats: action.payload};
 
-const ADD_CHAT = "ADD_CHAT"
+        case ActionTypes.CHATS_LOADING:
+            return {...state, isLoading: true, errMess: null, chats: []}
 
-export const chatsReducer = (state = defaultState, action) => {
-    switch (action.type){
-        case ADD_CHAT:
-            return {...state, chat: [...state.chats, action.payload]}
+        case ActionTypes.CHATS_FAILED:
+            return {...state, isLoading: false, errMess: action.payload};
+
         default:
-            return state
+            return state;
     }
-}
-
-/*export const addCustomerAction = (payload) => ({type: ADD_CHAT, payload})*/
+};
