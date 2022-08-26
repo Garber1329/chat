@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import imgUser from "./img/user.png";
 import MessageBox from "./components/messageBox";*/
 import Main from "./components/mainComponent";
-import {fetchChats, fetchMessages} from "./store/actionCreators";
+import {fetchChats, fetchMessages, postMessage} from "./store/actionCreators";
 
 const mapStateToProps = state => {
     return {
@@ -19,6 +19,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
+    postMessage: (chatId, from, text) => dispatch(postMessage(chatId, from, text)),
     fetchChats: () => { dispatch(fetchChats())},
     fetchMessages: () => { dispatch(fetchMessages())}
 });
@@ -58,41 +59,6 @@ class App extends React.Component{
         );
     }
 }
-
-// function App() {
-//   const [chats, setChats] = useState(/*useSelector(state => state.chats)*/[]);
-//   const [filter, setFilter] = useState({sort: '', query: ''});
-//   const sortedAndSearchedChats = useChats(chats, filter.sort, filter.query);
-//   const [selectedChat, setSelectedChat] = useState([]);
-//
-//   useEffect(async () => {
-//       this.props.fetchChats();
-//   },[])
-//
-//   return (
-//       <main className="main">
-//           <div className="container">
-//               <div className="d-flex">
-//                   <div className="chats-left">
-//                       <div className="chats-left__info">
-//                           <div className="all-chats__status">
-//                               <img className="all-chats__people-img" src={imgUser} alt=""/>
-//                               <span className="all-chat__status-online"><img src={img1} alt=""/></span>
-//                           </div>
-//                           {/*<ChatsFilter filter={filter}
-//                                        setFilter={setFilter}/>*/}
-//                       </div>
-//                       {/*<AllChats chats = {sortedAndSearchedChats}
-//                                 setSelectChat={setSelectedChat}/>*/}
-//                   </div>
-//                   <div className="chats-right">
-//                       {/*<MessageBox chat={selectedChat}/>*/}
-//                   </div>
-//               </div>
-//           </div>
-//       </main>
-//   );
-// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 

@@ -71,3 +71,47 @@ export const addMessages = (messages) => ({
     type: ActionTypes.ADD_MESSAGES,
     payload: messages
 });
+
+/**.......... Post Messages ............................ */
+
+export const addMessage = (message) => ({
+    type: ActionTypes.ADD_MESSAGE,
+    payload: message
+});
+
+export const postMessage = (chatId, from, text) => (dispatch) => {
+
+    const newMessage = {
+        chatId: chatId,
+        date: new Date().toISOString(),
+        from: from,
+        text: text
+    };
+
+    return fetch(baseUrl + 'messages', {
+        method: "POST",
+        body: JSON.stringify(newMessage),
+        headers: {
+            "Content-Type": "application/json"
+        },
+        credentials: "same-origin"
+    })
+        .then(response => {
+                if (response.ok) {
+                    return response;
+                } else {
+                    var error = new Error('Error ' + response.status + ': ' + response.statusText);
+                    error.response = response;
+                    throw error;
+                }
+            },
+            error => {
+                throw error;
+            })
+        .then(response => response.json())
+        .then(response => dispatch(addMessage(response)))
+        .catch(error => {
+            console.log('post message', error.message);
+            alert('Your message could not be posted\nError: ' + error.message);
+        });
+};
