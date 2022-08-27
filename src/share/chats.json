@@ -1,90 +1,88 @@
 {
-	"chats":[
-		{
-			"name": "Grace Freeman",
-			"type": "personal_chat",
-			"img": "https://images.unsplash.com/photo-1634748210255-af588c16652a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-			"id": 1001,
-			"messages": [
-				{
-				"id": 1,
-				"type": "message",
-				"date": "2020-01-01T00:01:01",
-				"from": "Grace Freeman",
-				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-				},
-				{
-				"id": 2,
-				"type": "message",
-				"date": "2020-01-01T00:02:02",
-				"from": "you",
-				"text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-				},
-				{
-				"id": 3,
-				"type": "message",
-				"date": "2020-01-01T00:03:04",
-				"from": "you",
-				"text": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-				},
-				{
-				"id": 4,
-				"type": "message",
-				"date": "2020-01-01T00:04:05",
-				"from": "Grace Freeman",
-				"text": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. "
-				},
-				{
-				"id": 5,
-				"type": "message",
-				"date": "2020-01-01T00:05:05",
-				"from": "you",
-				"text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy. "
-				},
-				{
-				"id": 6,
-				"type": "message",
-				"date": "2020-01-01T00:06:05",
-				"from": "Grace Freeman",
-				"text": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-				}
-			]
-		},
-		{
-			"name": "Douglas",
-			"type": "personal_chat",
-			"img": "https://images.unsplash.com/photo-1660598353451-9c5a0a0ff901?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-			"id": 1002,
-			"messages": [
-				{
-				"id": 1,
-				"type": "message",
-				"date": "2020-01-01T00:00:01",
-				"from": "you",
-				"text": "Hi!"
-				},
-				{
-				"id": 2,
-				"type": "message",
-				"date": "2020-01-01T00:00:02",
-				"from": "Douglas",
-				"text": "Come here"
-				},
-				{
-				"id": 3,
-				"type": "message",
-				"date": "2020-01-01T00:00:04",
-				"from": "you",
-				"text": "OKEY"
-				},
-				{
-				"id": 4,
-				"type": "message",
-				"date": "2020-01-01T00:00:05",
-				"from": "Douglas",
-				"text": "I'm wait!"
-				}
-			]
-		}
-	]
+  "chats":[
+    {
+      "name": "Grace Freeman",
+      "type": "personal_chat",
+      "img": "https://images.unsplash.com/photo-1634748210255-af588c16652a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "id": 1
+    },
+    {
+      "name": "Douglas",
+      "type": "personal_chat",
+      "img": "https://images.unsplash.com/photo-1660598353451-9c5a0a0ff901?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "id": 2
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "chatId": 1,
+      "date": "2020-01-01T00:01:01",
+      "from": "Grace Freeman",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 2,
+      "chatId": 1,
+      "date": "2020-01-01T00:02:02",
+      "from": "you",
+      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    },
+    {
+      "id": 3,
+      "chatId": 1,
+      "date": "2020-01-01T00:03:04",
+      "from": "you",
+      "text": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 4,
+      "chatId": 1,
+      "date": "2020-01-01T00:04:05",
+      "from": "Grace Freeman",
+      "text": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. "
+    },
+    {
+      "id": 5,
+      "chatId": 1,
+      "date": "2020-01-01T00:05:05",
+      "from": "you",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy. "
+    },
+    {
+      "id": 6,
+      "chatId": 1,
+      "date": "2020-01-01T00:06:05",
+      "from": "Grace Freeman",
+      "text": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "id": 7,
+      "chatId": 2,
+      "date": "2020-01-01T00:00:01",
+      "from": "you",
+      "text": "Hi!"
+    },
+    {
+      "id": 8,
+      "chatId": 2,
+      "date": "2020-01-01T00:00:02",
+      "from": "Douglas",
+      "text": "Come here"
+    },
+    {
+      "id": 9,
+      "chatId": 2,
+      "date": "2020-01-01T00:00:04",
+      "from": "you",
+      "text": "OKEY"
+    },
+    {
+      "id": 10,
+      "chatId": 2,
+      "date": "2020-01-01T00:00:05",
+      "from": "Douglas",
+      "text": "I'm wait!"
+    }
+  ]
 }

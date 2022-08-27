@@ -12,13 +12,13 @@ export const fetchChats = () => (dispatch) => {
                 if (response.ok) {
                     return response;
                 } else {
-                    var error = new Error('Error ' + response.status + ': ' + response.statusText);
+                    let error = new Error('Error ' + response.status + ': ' + response.statusText);
                     error.response = response;
                     throw error;
                 }
             },
             error => {
-                var errmess = new Error(error.message);
+                let errmess = new Error(error.message);
                 throw errmess;
             })
         .then(response => response.json())
@@ -48,13 +48,13 @@ export const fetchMessages = () => (dispatch) => {
                 if (response.ok) {
                     return response;
                 } else {
-                    var error = new Error('Error ' + response.status + ': ' + response.statusText);
+                    let error = new Error('Error ' + response.status + ': ' + response.statusText);
                     error.response = response;
                     throw error;
                 }
             },
             error => {
-                var errmess = new Error(error.message);
+                let errmess = new Error(error.message);
                 throw errmess;
             })
         .then(response => response.json())
@@ -100,7 +100,7 @@ export const postMessage = (chatId, from, text) => (dispatch) => {
                 if (response.ok) {
                     return response;
                 } else {
-                    var error = new Error('Error ' + response.status + ': ' + response.statusText);
+                    let error = new Error('Error ' + response.status + ': ' + response.statusText);
                     error.response = response;
                     throw error;
                 }
@@ -115,3 +115,4 @@ export const postMessage = (chatId, from, text) => (dispatch) => {
             alert('Your message could not be posted\nError: ' + error.message);
         });
 };
+

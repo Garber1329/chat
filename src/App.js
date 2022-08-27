@@ -1,15 +1,8 @@
 import React from "react";
 import './App.scss';
-/*import { useDispatch, useSelector } from "react-redux";
-import AllChats  from "./components/allChats";
-import ChatsFilter from "./components/chatsFilter";
-import {useChats} from "./components/useChats";*/
 import { connect } from 'react-redux';
-/*import img1 from "./img/tick-mark.png";
-import imgUser from "./img/user.png";
-import MessageBox from "./components/messageBox";*/
 import Main from "./components/mainComponent";
-import {fetchChats, fetchMessages, postMessage} from "./store/actionCreators";
+import {fetchChats, fetchMessages, postMessage} from "./redux/actionCreators";
 
 const mapStateToProps = state => {
     return {
@@ -51,6 +44,7 @@ class App extends React.Component{
     componentDidMount() {
         this.props.fetchChats();
         this.props.fetchMessages();
+
     }
 
     render() {

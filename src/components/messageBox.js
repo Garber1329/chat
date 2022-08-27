@@ -1,12 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import img1 from "../img/tick-mark.png";
 
-function MessageBox (props) {
+function MessageBox(props) {
 
     const [text, setText] = useState('');
 
+    function getChuckNorris() {
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then((response) => response.json())
+            .then((json) => {
+                setTimeout(()=> {
+                    props.postMessage(props.selectedChat.id, props.selectedChat.name, json.value);
+                }, 10000)
+            });
+    }
+
     const handleSubmit = () => {
-        props.postMessage(props.selectedChat.id, "you", text)
+        props.postMessage(props.selectedChat.id, "you", text);
+        getChuckNorris();
     }
 
     return <div className="message-box__wrap">
@@ -36,17 +47,32 @@ function MessageBox (props) {
                             {mes.text}
                         </div>
                         <div className="message-box__mes-date-you">
-                            {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'numeric', day: '2-digit', hour: "2-digit", minute: "numeric"}).format(new Date(Date.parse(mes.date)))}
+                            {new Intl.DateTimeFormat('en-US', {
+                                year: 'numeric',
+                                month: 'numeric',
+                                day: '2-digit',
+                                hour: "2-digit",
+                                minute: "numeric"
+                            }).format(new Date(Date.parse(mes.date)))}
                         </div>
                     </div>
                     :
                     <div key={mes.id} className="message-box__mes-from-another">
-                        <div className="d-flex">
-                            <img className="all-chats__people-img" src={props.selectedChat.img} alt={props.selectedChat.name}/>
-                            <div className="message-box__mes-text-another">{mes.text}</div>
-                        </div>
-                        <div className="message-box__mes-date-another">
-                            {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'numeric', day: '2-digit', hour: "2-digit", minute: "numeric"}).format(new Date(Date.parse(mes.date)))}
+                        <div>
+                            <div className="d-flex">
+                                <img className="all-chats__people-img" src={props.selectedChat.img}
+                                     alt={props.selectedChat.name}/>
+                                <div className="message-box__mes-text-another">{mes.text}</div>
+                            </div>
+                            <div className="message-box__mes-date-another">
+                                {new Intl.DateTimeFormat('en-US', {
+                                    year: 'numeric',
+                                    month: 'numeric',
+                                    day: '2-digit',
+                                    hour: "2-digit",
+                                    minute: "numeric"
+                                }).format(new Date(Date.parse(mes.date)))}
+                            </div>
                         </div>
                     </div>
                 )}
@@ -60,8 +86,8 @@ function MessageBox (props) {
                     <input type="text" className="message-box__input" placeholder="Type your message"
                            onChange={e => setText(e.target.value)}
                     ></input>
-                    <button className="message-box__botton" type="submit"
-                    onClick={handleSubmit}></button>
+                    <button className="message-box__botton"
+                            onClick={handleSubmit}></button>
                 </div>
             </div>
         }

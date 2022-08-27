@@ -9,7 +9,7 @@ export const Messages = (state = { errMess: null, messages:[]}, action) => {
             return {...state, errMess: action.payload};
 
         case ActionTypes.ADD_MESSAGE:
-            var message = action.payload;
+            let message = action.payload;
             return { ...state, messages: state.messages.concat(message)};
 
         default:

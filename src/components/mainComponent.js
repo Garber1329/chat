@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, {useState} from "react";
 import AllChats  from "../components/allChats";
 import ChatsFilter from "../components/chatsFilter";
 import {useChats} from "./useChats";
@@ -7,14 +6,11 @@ import img1 from "../img/tick-mark.png";
 import imgUser from "../img/user.png";
 import MessageBox from "../components/messageBox";
 
-
-
 function Main(props) {
   const [chats, setChats] = useState(props.props.chats.chats);
   const [filter, setFilter] = useState({sort: '', query: ''});
   const sortedAndSearchedChats = useChats(chats, filter.sort, filter.query);
   const [selectedChat, setSelectedChat] = useState(0);
-  const [selectedMes, setSelectedMes] = useState([]);
 
   return (
       <main className="main">
@@ -32,13 +28,13 @@ function Main(props) {
                       <AllChats chats = {sortedAndSearchedChats}
                                 setSelectChat = {setSelectedChat}
                                 selectedChat = {selectedChat}
-                                mes = {props.props.messages.messages}
-                                setSelectedMes = {setSelectedMes}/>
+                                mes = {props.props.messages.messages}/>
                   </div>
                   <div className="chats-right">
                       <MessageBox selectedChat = {selectedChat}
                                   selectedMes = {props.props.messages.messages.filter(mes =>  mes.chatId === selectedChat.id)}
-                                  postMessage = {props.props.postMessage}/>
+                                  postMessage = {props.props.postMessage}
+                      />
                   </div>
               </div>
           </div>
