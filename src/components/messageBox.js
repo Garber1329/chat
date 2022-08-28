@@ -1,15 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import img1 from "../img/tick-mark.png";
 
 function MessageBox(props) {
 
     const [text, setText] = useState('');
+    const bottomRef = useRef(null);
+
+    useEffect(() => {
+        // 👇️ scroll to bottom every time messages change
+        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+    }, [props.selectedMes]);
+
 
     function getChuckNorris() {
         fetch("https://api.chucknorris.io/jokes/random")
             .then((response) => response.json())
             .then((json) => {
-                setTimeout(()=> {
+                setTimeout(() => {
                     props.postMessage(props.selectedChat.id, props.selectedChat.name, json.value);
                 }, 10000)
             });
@@ -18,6 +25,7 @@ function MessageBox(props) {
     const handleSubmit = () => {
         props.postMessage(props.selectedChat.id, "you", text);
         getChuckNorris();
+        setText('');
     }
 
     return <div className="message-box__wrap">
@@ -40,9 +48,9 @@ function MessageBox(props) {
         {props.selectedMes.length === 0 ?
             <div></div>
             :
-            <div className="message-box__chat-wrap">
+            <div className="message-box__chat-wrap" id="message-box__chat-wrap">
                 {props.selectedMes.map(mes => mes.from === "you" ?
-                    <div key={mes.id}>
+                    <div key={mes.id} className="">
                         <div className="message-box__mes-from-you">
                             {mes.text}
                         </div>
@@ -76,6 +84,7 @@ function MessageBox(props) {
                         </div>
                     </div>
                 )}
+                <div ref={bottomRef} />
             </div>
         }
         {props.selectedChat === 0 ?
@@ -84,6 +93,7 @@ function MessageBox(props) {
             <div className="message-box__bottom">
                 <div className="message-box__input-wrap">
                     <input type="text" className="message-box__input" placeholder="Type your message"
+                           value={text}
                            onChange={e => setText(e.target.value)}
                     ></input>
                     <button className="message-box__botton"

@@ -3,6 +3,7 @@ import './App.scss';
 import { connect } from 'react-redux';
 import Main from "./components/mainComponent";
 import {fetchChats, fetchMessages, postMessage} from "./redux/actionCreators";
+import Loading from "./components/loading";
 
 const mapStateToProps = state => {
     return {
@@ -21,7 +22,7 @@ const  CheckProps = (props) => {
     if (props.props.chats.isLoading || props.props.messages.isLoading) {
         return(
             <div className="container">
-                <p>Loading . . .</p>
+                <Loading/>
             </div>
         );
     }

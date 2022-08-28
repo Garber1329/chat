@@ -11,24 +11,60 @@ function Main(props) {
   const [filter, setFilter] = useState({sort: '', query: ''});
   const sortedAndSearchedChats = useChats(chats, filter.sort, filter.query);
   const [selectedChat, setSelectedChat] = useState(0);
+  const [inputCheck, setInputCheck] = useState(false);
+
+/*
+  const [chats1, setChats1] = useState([]);
+  const chatAndData = chats.map(chat =>
+      [...chat, ...selectedChat]
+  )
+    console.log(chatAndData)
+  [...chat, ...mess.filter(mes => mes.chatId === chat.id)]
+    console.log(chatAndData);
+
+    for (const key of Object.keys(chats)) {
+        let s = chats[key];
+        setChats1([...chats1, {s: [...s]}]);
+    }
+
+    setChats1(chats[1]);
+    const [s,sS] = useState([]);
+        s.push({id:2, cart: chats});
+        s.push({id:3, cart: chats});
+    console.log(props.props);*/
 
   return (
       <main className="main">
           <div className="container">
               <div className="d-flex">
-                  <div className="chats-left">
-                      <div className="chats-left__info">
-                          <div className="all-chats__status">
-                              <img className="all-chats__people-img" src={imgUser} alt=""/>
-                              <span className="all-chat__status-online"><img src={img1} alt=""/></span>
+                  <input id="menu__toggle" type="checkbox"
+                         checked={inputCheck}
+                         onChange={e => setInputCheck(!e.target.checked)}/>
+                  <label className="menu__btn" htmlFor="menu__toggle"
+                  onClick={()=> setInputCheck(!inputCheck)}>
+                      <span></span>
+                  </label>
+                  <div className="chats-left menu__box">
+                      <div className="menu__item">
+                          <div className="chats-left__info">
+                              <div className="all-chats__status">
+                                  <div>
+                                      <img className="all-chats__people-img" src={imgUser} alt=""/>
+                                      <span className="all-chat__status-online"><img src={img1} alt=""/></span>
+                                  </div>
+
+                              </div>
+                              <ChatsFilter filter={filter}
+                                           setFilter={setFilter}/>
                           </div>
-                          <ChatsFilter filter={filter}
-                                       setFilter={setFilter}/>
+                          <AllChats chats = {sortedAndSearchedChats}
+                                    setSelectChat = {setSelectedChat}
+                                    selectedChat = {selectedChat}
+                                    mes = {props.props.messages.messages}
+                                    setInputCheck = {setInputCheck}
+                                    inputCheck={inputCheck}/>
                       </div>
-                      <AllChats chats = {sortedAndSearchedChats}
-                                setSelectChat = {setSelectedChat}
-                                selectedChat = {selectedChat}
-                                mes = {props.props.messages.messages}/>
+
                   </div>
                   <div className="chats-right">
                       <MessageBox selectedChat = {selectedChat}
