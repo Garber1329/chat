@@ -84,7 +84,7 @@ function MessageBox(props) {
                         </div>
                     </div>
                 )}
-                <div ref={bottomRef} />
+                <div ref={bottomRef}/>
             </div>
         }
         {props.selectedChat === 0 ?

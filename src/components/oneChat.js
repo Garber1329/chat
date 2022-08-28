@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import img1 from "../img/tick-mark.png";
 
-const OneChat = ({chat, messages, selectedChat, setSelectChat, setInputCheck,inputCheck}) => {
+const OneChat = ({chat, messages, selectedChat, setSelectChat, setInputCheck, inputCheck}) => {
 
     const [newMes, setNewMes] = useState([]);
 

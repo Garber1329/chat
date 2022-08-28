@@ -2,7 +2,7 @@ import React from "react";
 
 const Loading = () => {
 
-    return(
+    return (
         <div className="loading-center">
             <div className="lds-spinner">
                 <div></div>

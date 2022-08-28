@@ -1,4 +1,5 @@
 import React from 'react';
+/*import MySelect from "./mySelect";*/
 
 const ChatsFilter = ({filter, setFilter}) => {
     return (
@@ -11,15 +12,15 @@ const ChatsFilter = ({filter, setFilter}) => {
                     className="text-field__input"
                 ></input>
             </div>
-            {/*<MySelect*/}
-            {/*    value={filter.sort}*/}
-            {/*    onChange={selectedSort => setFilter({...filter, sort: selectedSort})}*/}
-            {/*    defaultValue="Sorting"*/}
-            {/*    options={[*/}
-            {/*        {value: 'title', name: 'By name'},*/}
-            {/*        {value: 'body', name: 'By description'},*/}
-            {/*    ]}*/}
-            {/*/>*/}
+            {/*<MySelect
+                value={filter.sort}
+                onChange={selectedSort => setFilter({...filter, sort: selectedSort})}
+                defaultValue="Sorting"
+                options={[
+                    {value: 'name', name: 'By name'},
+                    {value: 'date', name: 'By date'},
+                ]}
+            />*/}
         </div>
     );
 };

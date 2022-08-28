@@ -1,16 +1,16 @@
 {
-  "chats":[
+  "chats": [
     {
+      "id": 1,
       "name": "Grace Freeman",
       "type": "personal_chat",
-      "img": "https://images.unsplash.com/photo-1634748210255-af588c16652a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "id": 1
+      "img": "https://images.unsplash.com/photo-1634748210255-af588c16652a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     },
     {
+      "id": 2,
       "name": "Douglas",
       "type": "personal_chat",
-      "img": "https://images.unsplash.com/photo-1660598353451-9c5a0a0ff901?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "id": 2
+      "img": "https://images.unsplash.com/photo-1660598353451-9c5a0a0ff901?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     }
   ],
   "messages": [
@@ -83,6 +83,20 @@
       "date": "2020-01-01T00:00:05",
       "from": "Douglas",
       "text": "I'm wait!"
+    },
+    {
+      "chatId": 2,
+      "date": "2022-08-28T21:10:41.429Z",
+      "from": "you",
+      "text": "Hi",
+      "id": 11
+    },
+    {
+      "chatId": 2,
+      "date": "2022-08-28T21:10:51.884Z",
+      "from": "Douglas",
+      "text": "Chuck Norris is not a character in Mortal Kombat, because he is no mere mortal.",
+      "id": 12
     }
   ]
 }

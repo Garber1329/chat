@@ -1,5 +1,5 @@
 import * as ActionTypes from './actionTypes';
-import { baseUrl } from '../share/baseUrl';
+import {baseUrl} from '../share/baseUrl';
 
 /**.......... Chats ............................ */
 

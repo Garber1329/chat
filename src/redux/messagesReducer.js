@@ -1,6 +1,6 @@
 import * as ActionTypes from './actionTypes';
 
-export const Messages = (state = { errMess: null, messages:[]}, action) => {
+export const Messages = (state = {errMess: null, messages: []}, action) => {
     switch (action.type) {
         case ActionTypes.ADD_MESSAGES:
             return {...state, errMess: null, messages: action.payload};
@@ -10,7 +10,7 @@ export const Messages = (state = { errMess: null, messages:[]}, action) => {
 
         case ActionTypes.ADD_MESSAGE:
             let message = action.payload;
-            return { ...state, messages: state.messages.concat(message)};
+            return {...state, messages: state.messages.concat(message)};
 
         default:
             return state;

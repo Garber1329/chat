@@ -1,7 +1,7 @@
 import React from 'react';
 import OneChat from "./oneChat";
 
-function AllChats({chats, mes, selectedChat, setSelectChat, setInputCheck,inputCheck}) {
+function AllChats({chats, mes, selectedChat, setSelectChat, setInputCheck, inputCheck}) {
 
     return <div className="all-chats">
         <h1 className="all-chats__title">Chats</h1>
